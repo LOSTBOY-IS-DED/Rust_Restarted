@@ -1,4 +1,6 @@
+mod array;
 mod string;
+mod vectors;
 fn main() {
     println!("Hi there ishika mam");
     let ans: u32 = sum(10, 20);
@@ -6,6 +8,8 @@ fn main() {
     print!("Is 10 even? {}\n", is_even(10));
     string::say_hello("ishika");
     string::name();
+    array::array();
+    vectors::vectors();
 }
 
 fn sum(a: u32, b: u32) -> u32 {

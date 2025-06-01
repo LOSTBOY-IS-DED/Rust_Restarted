@@ -1,0 +1,17 @@
+Rust is a low level programming language
+
+Rust is a statically typed language
+Rust is a compiled language
+rust doesn't have garbage collector coz it makes the language slow so we will use ownership and we will manually do everything
+
+so while doing manual management we have to deal with few errors like 
+1. double free error
+2. Null pointer deference in case of java
+3. this makes rust fast and safe 
+4. no manual memory management
+
+data types --> uint , bool , string , array , tuple , enum , struct
+
+we have to do memory management ourselves in rust 
+
+strings are immutable by default 
