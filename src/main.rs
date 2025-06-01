@@ -1,9 +1,9 @@
 mod array;
 mod conditionals;
 mod loop_file;
+mod ownership;
 mod string;
 mod vectors;
-
 fn main() {
     println!("Hi there ishika mam");
     let ans: u32 = sum(10, 20);
@@ -25,6 +25,23 @@ fn main() {
     //loops
     let name = String::from("ishika gupta");
     println!("First name: {}", loop_file::get_first_name(name));
+
+    // wrong ownership
+    // will give an error for sure
+
+    // let str = String::from("Harkirat");
+    // let len = ownership::get_length(&str);
+    // println!("{}", len);
+
+    // println!("{}", str);
+
+    // correct ownership
+
+    let str = String::from("Ishika");
+    let len = ownership::get_length(&str);
+    println!("{}", len);
+
+    println!("{}", str);
 }
 
 fn sum(a: u32, b: u32) -> u32 {

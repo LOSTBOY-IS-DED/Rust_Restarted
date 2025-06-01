@@ -15,3 +15,29 @@ data types --> uint , bool , string , array , tuple , enum , struct
 we have to do memory management ourselves in rust 
 
 strings are immutable by default 
+
+by default everything is immutable in rust
+// why do we do this ? 
+// few things that creates memory issues in life like mutability and null
+
+commit id --> f55f605
+
+after this we are gonna learn ownership its a rust specific concept
+// c++ was a memory unsafe language 
+// it had buffer overflow exploits
+// null pointer exception 
+// double free error 
+
+coz humans have been given the power of memory management and humans can do mistakes but rust insures us that we are not doing any mistakes
+
+even if you are a dumb develop who tries to do something bad rust will say i wont let you do that 
+
+// call stack limit exceed --> stack overflow error
+
+the strings are stored in the heap memory
+the heap memory is a region of memory that is not managed by the operating system
+the heap memory is managed by the rust runtime
+
+it can increase or decrease the size of the heap memory by the rust runtime
+
+function is stored in the stack memory its only has the location , length and capacity but the actual code is stored in the heap memory
