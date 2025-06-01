@@ -1,6 +1,9 @@
 mod array;
+mod conditionals;
+mod loop_file;
 mod string;
 mod vectors;
+
 fn main() {
     println!("Hi there ishika mam");
     let ans: u32 = sum(10, 20);
@@ -15,6 +18,13 @@ fn main() {
 
     //vectors
     vectors::vectors();
+
+    //conditionals
+    conditionals::conditionals();
+
+    //loops
+    let name = String::from("ishika gupta");
+    println!("First name: {}", loop_file::get_first_name(name));
 }
 
 fn sum(a: u32, b: u32) -> u32 {
