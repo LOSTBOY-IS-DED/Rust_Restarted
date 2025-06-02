@@ -41,3 +41,6 @@ the heap memory is managed by the rust runtime
 it can increase or decrease the size of the heap memory by the rust runtime
 
 function is stored in the stack memory its only has the location , length and capacity but the actual code is stored in the heap memory
+
+
+PART-2 has the borrowing and references
