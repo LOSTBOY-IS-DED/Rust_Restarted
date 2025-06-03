@@ -1,4 +1,4 @@
-mod using_as_obj;
+// mod using_as_obj;
 
 // fn main() {
 //     let str: String = String::from("Hello Ishika");
@@ -67,6 +67,31 @@ mod using_as_obj;
 
 // enums and pattern matching  ----------------------------------------------------------------------------------------------------------
 
+// this wont work and is wrong
+
+// enum Direction {
+//     North,
+//     South,
+//     East,
+//     West,
+// }
+
+// fn main() {
+//     let direction = Direction::North;
+//     stear(direction);
+// }
+
+// fn stear(dir: Direction) {
+//     if dir == Direction::North {
+//         println!("Going North");
+//     } else if dir == Direction::South {
+//         println!("Going South");
+//     } else {
+//         println!("Going horizontal");
+//     }
+// }
+
+// cprrect way now pattern matching
 enum Direction {
     North,
     South,
@@ -80,11 +105,9 @@ fn main() {
 }
 
 fn stear(dir: Direction) {
-    if dir == Direction::North {
-        println!("Going North");
-    } else if dir == Direction::South {
-        println!("Going South");
-    } else {
-        println!("Going horizontal");
+    match dir {
+        Direction::East => println!("Going East"),
+        Direction::West => println!("Going West"),
+        default => println!("Going horizontal"),
     }
 }
