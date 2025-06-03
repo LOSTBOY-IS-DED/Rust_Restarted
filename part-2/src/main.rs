@@ -51,14 +51,40 @@ mod using_as_obj;
 //     println! {"{} {}" , str3, str4}
 // }
 
-fn main() {
-    let user = using_as_obj::User {
-        name: String::from("Ishika"),
-        is_active: true,
-        email: String::from("ishika@gmail.com"),
-        password: String::from("123456"),
-    };
+// structs  ----------------------------------------------------------------------------------------------------------
 
-    println!("{}", user.name);
-    println!("{:?}", user);
+// fn main() {
+//     let user = using_as_obj::User {
+//         name: String::from("Ishika"),
+//         is_active: true,
+//         email: String::from("ishika@gmail.com"),
+//         password: String::from("123456"),
+//     };
+
+//     println!("{}", user.name);
+//     println!("{:?}", user);
+// }
+
+// enums and pattern matching  ----------------------------------------------------------------------------------------------------------
+
+enum Direction {
+    North,
+    South,
+    East,
+    West,
+}
+
+fn main() {
+    let direction = Direction::North;
+    stear(direction);
+}
+
+fn stear(dir: Direction) {
+    if dir == Direction::North {
+        println!("Going North");
+    } else if dir == Direction::South {
+        println!("Going South");
+    } else {
+        println!("Going horizontal");
+    }
 }
