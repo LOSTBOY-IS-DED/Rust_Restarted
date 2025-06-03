@@ -1,4 +1,5 @@
 // mod using_as_obj;
+mod file_hadling;
 
 // fn main() {
 //     let str: String = String::from("Hello Ishika");
@@ -102,6 +103,7 @@ enum Direction {
 fn main() {
     let direction = Direction::North;
     stear(direction);
+    file_hadling::file();
 }
 
 fn stear(dir: Direction) {
