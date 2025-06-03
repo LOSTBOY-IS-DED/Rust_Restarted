@@ -62,3 +62,7 @@ PART-2 has the borrowing and references
 structs are similar to objects in javascript
 
 for adding associated function to a struct we have to use impl keyword and if the associated function is using some value from the struct we have to pass the self as the first argument
+
+
+// enums with values part 2 enum can also store values
+next assignment --> part 3 
