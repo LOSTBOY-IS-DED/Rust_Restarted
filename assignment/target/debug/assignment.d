@@ -1,0 +1,1 @@
+/Users/subhajitchaudhury/Desktop/code-playground/cohort-journey/web3/week-26-rust-part-1/assignment/target/debug/assignment: /Users/subhajitchaudhury/Desktop/code-playground/cohort-journey/web3/week-26-rust-part-1/assignment/src/main.rs
