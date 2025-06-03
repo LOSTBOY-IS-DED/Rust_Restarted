@@ -1,1 +1,1 @@
-/Users/subhajitchaudhury/Desktop/code-playground/cohort-journey/web3/week-26-rust-part-1/part-2/target/debug/part-2: /Users/subhajitchaudhury/Desktop/code-playground/cohort-journey/web3/week-26-rust-part-1/part-2/src/main.rs
+/Users/subhajitchaudhury/Desktop/code-playground/cohort-journey/web3/week-26-rust-part-1/part-2/target/debug/part-2: /Users/subhajitchaudhury/Desktop/code-playground/cohort-journey/web3/week-26-rust-part-1/part-2/src/main.rs /Users/subhajitchaudhury/Desktop/code-playground/cohort-journey/web3/week-26-rust-part-1/part-2/src/using_as_obj.rs
