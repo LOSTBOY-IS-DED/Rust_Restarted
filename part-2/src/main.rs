@@ -1,5 +1,6 @@
 // mod using_as_obj;
-mod file_hadling;
+// mod file_hadling;
+mod option_enum;
 
 // fn main() {
 //     let str: String = String::from("Hello Ishika");
@@ -92,24 +93,29 @@ mod file_hadling;
 //     }
 // }
 
-// cprrect way now pattern matching
-enum Direction {
-    North,
-    South,
-    East,
-    West,
-}
+// correct way now pattern matching
+// enum Direction {
+//     North,
+//     South,
+//     East,
+//     West,
+// }
 
+// fn main() {
+//     let direction = Direction::North;
+//     stear(direction);
+//     file_hadling::file();
+// }
+
+// fn stear(dir: Direction) {
+//     match dir {
+//         Direction::East => println!("Going East"),
+//         Direction::West => println!("Going West"),
+//         default => println!("Going horizontal"),
+//     }
+// }
+
+// finally studied option enum
 fn main() {
-    let direction = Direction::North;
-    stear(direction);
-    file_hadling::file();
-}
-
-fn stear(dir: Direction) {
-    match dir {
-        Direction::East => println!("Going East"),
-        Direction::West => println!("Going West"),
-        default => println!("Going horizontal"),
-    }
+    option_enum::option_enum_fn();
 }
