@@ -15,9 +15,9 @@ fn main() {
     let square_area = calc_area(&square);
     let rectangle_area = calc_area(&rectangle);
 
-    let circle_perimeter = calc_perimiter(&circle);
-    let square_perimeter = calc_perimiter(&square);
-    let rectangle_perimeter = calc_perimiter(&rectangle);
+    let circle_perimeter = calc_perimeter(&circle);
+    let square_perimeter = calc_perimeter(&square);
+    let rectangle_perimeter = calc_perimeter(&rectangle);
 
     println!("Circle area is {}", circle_area);
     println!("Square area is {}", square_area);
@@ -39,7 +39,7 @@ fn calc_area(s: &Shapes) -> f32 {
     }
 }
 
-fn calc_perimiter(s: &Shapes) -> f32 {
+fn calc_perimeter(s: &Shapes) -> f32 {
     match s {
         Shapes::Circle(radius) => 2.0 * 3.14 * radius,
         Shapes::Square(side) => 4.0 * side,
