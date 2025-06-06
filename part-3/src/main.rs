@@ -11,21 +11,53 @@ mod display;
 
 // understanding generics
 
-fn main() {
-    let ans = sum(2, 4);
-    // let ans2 = sum(2, 4.0);  // this piece of line would give me error
-    let name = String::from("Subh the great");
-    display::display(name);
-    println!("The ans value is : {}", ans)
-}
+// fn main() {
+//     let ans = sum(2, 4);
+//     // let ans2 = sum(2, 4.0);  // this piece of line would give me error
+//     let name = String::from("Subh the great");
+//     display::display(name);
+//     println!("The ans value is : {}", ans)
+// }
 
-// without trait bound
+// // without trait bound
 
-// fn sum<T>(a: T, b: T) -> T {
+// // fn sum<T>(a: T, b: T) -> T {
+// //     return a + b;
+// // }
+
+// // with trait bound
+// fn sum<T: std::ops::Add<Output = T>>(a: T, b: T) -> T {
 //     return a + b;
 // }
 
-// with trait bound
-fn sum<T: std::ops::Add<Output = T>>(a: T, b: T) -> T {
-    return a + b;
+// what are traits ? similar as interfaces in ts we can implement them
+
+trait Shape {
+    fn area(&self) -> u32;
 }
+
+struct Rect {
+    width: u32,
+    height: u32,
+}
+
+impl Shape for Rect {
+    fn area(&self) -> u32 {
+        return self.width * self.height;
+    }
+}
+
+fn main() {
+    let r = Rect {
+        width: 10,
+        height: 10,
+    };
+    let ans = get_area(r);
+    println!("{}", ans)
+}
+
+fn get_area(s: impl Shape) -> u32 {
+    return s.area();
+}
+
+// can you implement this for circle in the next commit  ?

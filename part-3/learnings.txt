@@ -1,0 +1,2 @@
+traits are similar to interfaces in typescript
+
