@@ -83,8 +83,6 @@ mod display;
 
 // there is a struct i haven't implemented it yet
 
-use std::{fmt::format, fmt::Display};
-
 #[derive(Debug)]
 struct User {
     username: String,
@@ -94,18 +92,45 @@ struct User {
 
 // impl Debug for User {
 // derive line just added this piece of code
+// impl ::core::fmt::Debug for User {
+//     #[inline]
+//     fn fmt(&self, f: &mut ::core::fmt::Formatter) -> ::core::fmt::Result {
+//         ::core::fmt::Formatter::debug_struct_field3_finish(
+//             f,
+//             "User",
+//             "username",
+//             &self.username,
+//             "password",
+//             &self.password,
+//             "age",
+//             &&self.age,
+//         )
+//     }
+// }
 // }
 
+// fn main() {
+//     println!("Hello world !!!");
+
+//     let user = User {
+//         username: String::from("Subh"),
+//         password: String::from("password"),
+//         age: 32,
+//     };
+
+//     println!("{:?}", user); // Debug print
+//                             // println!("{}", user); // Pretty Display print
+//     println!("Users username is {}", user.username)
+// }
+
+// clone and copy
+// variable of a stack can be easily copied but not that of a heap
+// heap are slow
+
 fn main() {
-    println!("Hello world !!!");
+    let num = 1;
+    let num2 = 2;
 
-    let user = User {
-        username: String::from("Subh"),
-        password: String::from("password"),
-        age: 32,
-    };
-
-    println!("{:?}", user); // Debug print
-                            // println!("{}", user); // Pretty Display print
-    println!("Users username is {}", user.username)
+    println!("{}", num);
+    println!("{}", num2);
 }
