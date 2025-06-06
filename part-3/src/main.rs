@@ -127,24 +127,25 @@ struct User {
 // variable of a stack can be easily copied but not that of a heap
 // heap are slow
 
-fn main() {
-    let num = 1;
-    let num2 = 2;
-
-    print_it(num2); // ownership didn't transferred here
-    println!("{}", num);
-    println!("{}", num2);
-}
-
-fn print_it(a: u32) {
-    println!("{}", a);
-}
-
 // fn main() {
-//     let name = String::from("Ishika");
-//     print_name(name);
+//     let num = 1;
+//     let num2 = 2;
+
+//     print_it(num2); // ownership didn't transferred here
+//     println!("{}", num);
+//     println!("{}", num2);
 // }
 
-// fn print_name(name: String) {
-//     println!("{}", name);
+// fn print_it(a: u32) {
+//     println!("{}", a);
 // }
+
+fn main() {
+    let name = String::from("Ishika");
+    print_name(name.clone());
+    println!("{}", name);
+}
+
+fn print_name(name: String) {
+    println!("{}", name);
+}
