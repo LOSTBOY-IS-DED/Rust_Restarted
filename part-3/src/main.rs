@@ -131,6 +131,20 @@ fn main() {
     let num = 1;
     let num2 = 2;
 
+    print_it(num2); // ownership didn't transferred here
     println!("{}", num);
     println!("{}", num2);
 }
+
+fn print_it(a: u32) {
+    println!("{}", a);
+}
+
+// fn main() {
+//     let name = String::from("Ishika");
+//     print_name(name);
+// }
+
+// fn print_name(name: String) {
+//     println!("{}", name);
+// }
