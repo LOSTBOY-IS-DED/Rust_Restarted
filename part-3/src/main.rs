@@ -83,12 +83,12 @@ mod display;
 
 // there is a struct i haven't implemented it yet
 
-#[derive(Debug)]
-struct User {
-    username: String,
-    password: String,
-    age: u32,
-}
+// #[derive(Debug)]
+// struct User {
+//     username: String,
+//     password: String,
+//     age: u32,
+// }
 
 // impl Debug for User {
 // derive line just added this piece of code
@@ -140,12 +140,35 @@ struct User {
 //     println!("{}", a);
 // }
 
-fn main() {
-    let name = String::from("Ishika");
-    print_name(name.clone());
-    println!("{}", name);
+// fn main() {
+//     let name = String::from("Ishika");
+//     print_name(name.clone());
+//     println!("{}", name);
+// }
+
+// fn print_name(name: String) {
+//     println!("{}", name);
+// }
+
+// now the question is if i define my own struct ?
+
+#[derive(Debug, Copy, Clone)]
+
+struct User {
+    is_name: bool,
+    age: u32,
 }
 
-fn print_name(name: String) {
-    println!("{}", name);
+fn main() {
+    let u1 = User {
+        is_name: true,
+        age: 22,
+    };
+
+    let u2 = u1;
+    // or u1.clone()
+
+    println!("{:?} {:?}", u1, u2)
 }
+
+// if i  add strings it doesn't implements copy
