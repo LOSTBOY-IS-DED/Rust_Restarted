@@ -47,12 +47,25 @@ impl Shape for Rect {
     }
 }
 
+struct Circle {
+    radius: u32,
+}
+
+impl Shape for Circle {
+    fn area(&self) -> u32 {
+        return self.radius * self.radius;
+    }
+}
+
 fn main() {
     let r = Rect {
         width: 10,
         height: 10,
     };
+    let circle = Circle { radius: 20 };
+    let circle_ans = get_area(circle);
     let ans = get_area(r);
+    println!("{}", circle_ans);
     println!("{}", ans)
 }
 
@@ -61,3 +74,7 @@ fn get_area(s: impl Shape) -> u32 {
 }
 
 // can you implement this for circle in the next commit  ?
+// step 1 : create struct
+// step 2 : implement struct
+// step 3 : create variable
+// step 4 : call the function

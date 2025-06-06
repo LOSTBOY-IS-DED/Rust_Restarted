@@ -1,2 +1,4 @@
 traits are similar to interfaces in typescript
 
+few struct can implement this trait
+like the trait shape has area and its implemented by Rect or Circle
